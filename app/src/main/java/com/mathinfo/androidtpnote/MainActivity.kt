@@ -1,22 +1,19 @@
-package com.mathinfo.androidtpnote;
+package com.mathinfo.androidtpnote
 
-import android.os.Bundle;
-import android.view.Menu;
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle
+import android.view.Menu
+import androidx.appcompat.app.AppCompatActivity
 
-public class MainActivity extends AppCompatActivity{
+class MainActivity : AppCompatActivity() {
     // Generate the main activity
-    @Override
-    public void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        setSupportActionBar(findViewById(R.id.toolbar));
-
+    public override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        setSupportActionBar(findViewById(R.id.toolbar))
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
     }
 }
